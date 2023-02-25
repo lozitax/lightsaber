@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "owners",
+  "info": {
+    "singularName": "owner",
+    "pluralName": "owners",
+    "displayName": "Owner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "galaxy": {
+      "type": "string"
+    },
+    "birthday": {
+      "type": "date"
+    },
+    "profile": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "sabers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::saber.saber",
+      "mappedBy": "owner"
+    }
+  }
+}

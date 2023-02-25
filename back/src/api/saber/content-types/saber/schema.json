@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sabers",
+  "info": {
+    "singularName": "saber",
+    "pluralName": "sabers",
+    "displayName": "Saber",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "size": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::owner.owner",
+      "inversedBy": "sabers"
+    }
+  }
+}
